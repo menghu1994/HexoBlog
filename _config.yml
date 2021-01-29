@@ -8,18 +8,18 @@ subtitle: ''
 description: ''
 keywords:
 author: Luffy
-language: ch-ZN
-timezone: ''
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://example.com
+url: https://menghu1994.github.io/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -106,3 +106,15 @@ deploy:
   type: git
   repository: https://github.com/menghu1994/menghu1994.github.io
   branch: master
+
+#豆瓣
+douban: 
+  user: 166467024    #个人的id  
+  builtin: false   #如果想生成豆瓣页面，这个需要设置为true
+  book: 
+      title: '书单' 
+      quote: '我的书单' 
+  movie: 
+      title: '电影' 
+      quote: '我的影单' 
+  timeout: 20000
