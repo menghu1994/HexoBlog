@@ -176,8 +176,6 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
-  - /js/qipao.js
-  - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/qipao.js
 
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
@@ -279,23 +277,29 @@ navbar:
   # 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
-    - { key: "主页", link: "/", icon: "iconfont icon-home-fill" }
+    - { key: "首页", link: "/", icon: "iconfont icon-home-fill" }
     - { key: "文章", link: "/archives/", icon: "iconfont icon-archive-fill" }
-    # - { key: "文章", link: "/categories/", icon: "iconfont icon-category-fill" }
-    - { key: "爱好",
-        icon: "iconfont icon-tags-fill",
+    - { key: "我们", 
+        icon: "iconfont icon-category-fill",
         submenu: [
-          { key: '影单',link: '/movies/',icon: 'iconfont icon-books' },
-          { key: '书单',link: '/books/', icon: 'iconfont icon-books' }
+          { key: '我们',link: '/us/',icon: 'iconfont icon-user-fill' },
+          { key: '相册',link: '/photos/', icon: 'iconfont icon-books' }
         ]
       }
-    - { key: "关于", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { key: "关于",
+        icon: "iconfont icon-tags-fill",
+        submenu: [
+          { key: '我',link: '/about/',icon: 'iconfont icon-user-fill' },
+          { key: '投食',link: '/money/', icon: 'iconfont icon-books' }
+        ]
+      }
+    - { key: "留言", link: "/comments/", icon: "iconfont icon-user-fill" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
 search:
-  enable: true
+  enable: false
   # 搜索索引文件的路径，可以是相对路径或外站的绝对路径
   # Path for search index file, it can be a relative path or an absolute path
   path: /local-search.xml
@@ -351,9 +355,9 @@ scroll_top_arrow:
 footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   content: '
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>孟虎</span></a>
+    <a href="https://menghu1994.github.io/meng/" target="_blank" rel="nofollow noopener"><span>孟虎</span></a>
     <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>吴凡</span></a>
+    <a href="https://menghu1994.github.io/wu/" target="_blank" rel="nofollow noopener"><span>吴凡</span></a>
   '
 
   # 展示网站的 PV、UV 统计数
@@ -786,7 +790,7 @@ tag:
 about:
   enable: true
   banner_img: /img/default.png
-  banner_img_height: 60
+  banner_img_height: 40
   banner_mask_alpha: 0.3
   subtitle:  ✍ Hello gays
   avatar: /img/head.png
@@ -808,8 +812,8 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/default.png
-  banner_img_height: 60
+  banner_img: /img/bg/tag.png
+  banner_img_height: 40
   banner_mask_alpha: 0.3
 
 
@@ -830,7 +834,7 @@ page404:
 # Links Page
 #---------------------------
 links:
-  enable: true
+  enable: false
   banner_img: /img/default.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
