@@ -81,7 +81,7 @@ fun_features:
   anchorjs:
     enable: true
     element: h1,h2,h3,h4,h5,h6
-    placement: right
+    placement: left
     # Options: hover | always | touch
     visible: hover
     # Option：§ | # | ❡
@@ -280,8 +280,8 @@ navbar:
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
     - { key: "主页", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "标签", link: "/archives/", icon: "iconfont icon-archive-fill" }
-    - { key: "分类", link: "/categories/", icon: "iconfont icon-category-fill" }
+    - { key: "文章", link: "/archives/", icon: "iconfont icon-archive-fill" }
+    # - { key: "文章", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "爱好",
         icon: "iconfont icon-tags-fill",
         submenu: [
@@ -351,9 +351,9 @@ scroll_top_arrow:
 footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   content: '
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>孟虎</span></a>
     <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>吴凡</span></a>
   '
 
   # 展示网站的 PV、UV 统计数
@@ -664,7 +664,7 @@ gitalk:
 valine:
   appid: K5t0hzq1aPNDTQPiOHKBjo2A-gzGzoHsz
   appkey: iL3edhps0y1W2SNJdJLw67NF
-  placeholder: 你总得说点啥吧
+  placeholder: 
   path: window.location.pathname
   avatar: robohash
   meta: ['nick', 'mail']
@@ -791,7 +791,7 @@ about:
   subtitle:  ✍ Hello gays
   avatar: /img/head.png
   name: "孟 虎"
-  introduce: "一个菜鸡的博客"
+  introduce: "博客日志 | 技术文档"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
